@@ -11,7 +11,7 @@ Each cell of the nonogram can be in one of the 3 state:
 We define a sector as a slice of a row/column, with associated clues. A sector has the following properties:
 
 - It must not contain a blank cell. If a sector contain a blank cell, it is split into 2 smaller sector at the blank cell, not including the blank.
-- A sector inherit partial clues from its row/column. These clues may be duplicated (shared by multiple sector on the same rol/col), but must only be solved once, requiring deduplication operation on the row/col.
+- A sector inherit partial clues from its row/column. These clues may be duplicated (shared by multiple sector on the same rol/col), cannot be solved (how do you prove that a clue is solved in this sector when it could be solved at the other sector), thus require deduplication.
 
 Cells in sector may change state via the following:
 
